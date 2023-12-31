@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Workout_blazor"
+             x:Class="Workout_blazor.MainPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+             <!--xmlns:viewmodel="clr-namespace:Workout_blazor.ViewModel"
+             x:DataType="viewmodel:MainViewModel"-->
+    <!--<BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html">
+        <BlazorWebView.RootComponents>
+            <RootComponent Selector="#app" ComponentType="{x:Type local:Main}" />
+            
+        </BlazorWebView.RootComponents>
+    </BlazorWebView>-->
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,30"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Welcome to EJ's Workout Program"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="28"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="''Rather train yourself for godliness; for while bodily training is of some value, godliness is of value in every way, as it holds promise for the present life and also for the life to come.'' 1 Tim. 4:7b-8"
+                SemanticProperties.HeadingLevel="Level2"
+                MaximumWidthRequest="350"
+                FontSize="14"
+                HorizontalOptions="Center" />
+
+            <!--<Button
+                x:Name="WebContent"
+                Text="Go to Razor page Content" 
+                Command="{Binding WebContentCommand}"
+                HorizontalOptions="Center" />-->
+
+            <Button
+                x:Name="AddExercise"
+                Text="Add Exercise"
+                BackgroundColor="Black"
+                TextColor="Yellow"
+                MinimumWidthRequest="400"
+                SemanticProperties.Hint="Adds an exercise"
+                Clicked="AddExerciseClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="UpdateExercise"
+                Text="Edit Exercise to Dumbell"
+                BackgroundColor="Black"
+                TextColor="Yellow"
+                MinimumWidthRequest="400"
+                SemanticProperties.Hint="Updates an exercise"
+                Clicked="UpdateExerciseClicked"
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="DeleteExercise"
+                Text="Delete Exercise"
+                BackgroundColor="Black"
+                TextColor="Yellow"
+                MinimumWidthRequest="400"
+                SemanticProperties.Hint="Hint"
+                Clicked="DeleteExerciseClicked"
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="Filter1"
+                Text="Exercise name = Bench Press?"
+                BackgroundColor="Black"
+                TextColor="Yellow"
+                MinimumWidthRequest="400"
+                SemanticProperties.Hint="Hint"
+                Clicked="Filter1ExerciseClicked"
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="Filter2"
+                Text="Coefficient > 1?"
+                BackgroundColor="Black"
+                TextColor="Yellow"
+                MinimumWidthRequest="400"
+                SemanticProperties.Hint="Hint"
+                Clicked="Filter2ExerciseClicked"
+                HorizontalOptions="Center" />
+
+            <CollectionView x:Name="collectionView" SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout>
+                            <Label Text="{Binding Type} "
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Text="|"
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding Name}" 
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Text="|"
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding Sets}" 
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Text="|"
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding Reps}" 
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Text="|"
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding Force}" 
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Text="|"
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding Coefficient}" HorizontalOptions="CenterAndExpand"    />
+
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>        
+    </ScrollView>
+
+
+</ContentPage>
