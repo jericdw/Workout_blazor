@@ -11,3 +11,8 @@ My current obstacles revolve around dependency injection on the user interface i
 If you are experienced as a dotnet developer, I'll ask for recommendations as I'm a hobbyist with other fulltime responsibilities. 
 
 If you are new to this environment, feel free to learn with me. Any thoughts, comments are appreciated!
+
+Update: I had not come across this presentation, but I am placing it here given it answers majority of the questions I had in this ReadMe section.
+https://learn.microsoft.com/en-us/shows/building-apps-with-xaml-and-dotnet-maui/use-dependency-injection-building-apps-with-xaml-and-dotnet-maui?source=docs
+
+Modifying the code structure to match is my current direction...
